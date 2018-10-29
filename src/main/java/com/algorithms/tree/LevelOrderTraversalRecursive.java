@@ -1,8 +1,6 @@
 package com.algorithms.tree;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -35,12 +33,8 @@ public class LevelOrderTraversalRecursive {
 	}
 
 	public int findMaxDistinctValuesRecursive(Tree tree) {
-		List<Set<Integer>> values = new ArrayList<Set<Integer>>();
-		Set<Integer> listValues = new HashSet<Integer>();
-		listValues.add(tree.x);
-		values.add(listValues);
-		List<Tree> level = new ArrayList<Tree>();
-		level.add(tree);
-		return findDistinctRecursive(tree, listValues);
+		Set<Integer> values = new HashSet<Integer>();
+		values.add(tree.x);
+		return findDistinctRecursive(tree, values);
 	}
 }
