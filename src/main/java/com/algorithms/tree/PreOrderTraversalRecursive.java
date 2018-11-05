@@ -9,7 +9,7 @@ import java.util.Set;
  * @author Antonio Damato
  *
  */
-public class LevelOrderTraversalRecursive {
+public class PreOrderTraversalRecursive {
 
 	private int findDistinctRecursive(Tree tree, Set<Integer> values) {
 		if (tree.left == null && tree.right == null)

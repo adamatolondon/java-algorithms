@@ -3,7 +3,7 @@ package com.algorithms.tree;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TreeLevelOrderTraversalRecTest {
+public class TreePreOrderTraversalRecTest {
 
 	/* .......... 2 ....... */
 	/* ......... / \ ...... */
@@ -56,24 +56,24 @@ public class TreeLevelOrderTraversalRecTest {
 	@Test
 	public void simpleTreeOneNodeRecursive() {
 		Tree tree = new Tree(7);
-		LevelOrderTraversalRecursive levelOrderTraversal = new LevelOrderTraversalRecursive();
-		int n = levelOrderTraversal.findMaxDistinctValuesRecursive(tree);
+		PreOrderTraversalRecursive preOrderTraversal = new PreOrderTraversalRecursive();
+		int n = preOrderTraversal.findMaxDistinctValuesRecursive(tree);
 		Assert.assertEquals(1, n);
 	}
 
 	@Test
 	public void simpleTreeRecursive() {
 		Tree tree = createSimpleTree();
-		LevelOrderTraversalRecursive levelOrderTraversal = new LevelOrderTraversalRecursive();
-		int n = levelOrderTraversal.findMaxDistinctValuesRecursive(tree);
+		PreOrderTraversalRecursive preOrderTraversal = new PreOrderTraversalRecursive();
+		int n = preOrderTraversal.findMaxDistinctValuesRecursive(tree);
 		Assert.assertEquals(4, n);
 	}
 
 	@Test
 	public void complexTreeRecursive() {
 		Tree tree = createComplexTree();
-		LevelOrderTraversalRecursive levelOrderTraversal = new LevelOrderTraversalRecursive();
-		int n = levelOrderTraversal.findMaxDistinctValuesRecursive(tree);
+		PreOrderTraversalRecursive preOrderTraversal = new PreOrderTraversalRecursive();
+		int n = preOrderTraversal.findMaxDistinctValuesRecursive(tree);
 		Assert.assertEquals(5, n);
 	}
 
