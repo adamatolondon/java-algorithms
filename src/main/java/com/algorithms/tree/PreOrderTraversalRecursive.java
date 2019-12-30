@@ -11,7 +11,7 @@ import java.util.Set;
  */
 public class PreOrderTraversalRecursive {
 
-	private int findDistinctRecursive(Tree tree, Set<Integer> values) {
+	private int findDistinctRecursive(BSTNode tree, Set<Integer> values) {
 		if (tree.left == null && tree.right == null)
 			return values.size();
 
@@ -32,7 +32,7 @@ public class PreOrderTraversalRecursive {
 		return maxLeft > maxRight ? maxLeft : maxRight;
 	}
 
-	public int findMaxDistinctValuesRecursive(Tree tree) {
+	public int findMaxDistinctValuesRecursive(BSTNode tree) {
 		Set<Integer> values = new HashSet<Integer>();
 		values.add(tree.x);
 		return findDistinctRecursive(tree, values);

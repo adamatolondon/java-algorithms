@@ -12,50 +12,50 @@ public class TreePreOrderTraversalRecTest {
 	/* ...... 4 ........... */
 	/* ..... / \ .......... */
 	/* .... 5 .. 4 ........ */
-	private Tree createSimpleTree() {
-		Tree treeL4_1 = new Tree(4);
-		Tree treeL4_2 = new Tree(5);
+	private BSTNode createSimpleTree() {
+		BSTNode treeL4_1 = new BSTNode(4);
+		BSTNode treeL4_2 = new BSTNode(5);
 
-		Tree treeL3 = new Tree(4);
+		BSTNode treeL3 = new BSTNode(4);
 		treeL3.left = treeL4_2;
 		treeL3.right = treeL4_1;
 
-		Tree treeL2_1 = new Tree(3);
+		BSTNode treeL2_1 = new BSTNode(3);
 		treeL2_1.left = treeL3;
 
-		Tree treeL2_2 = new Tree(7);
+		BSTNode treeL2_2 = new BSTNode(7);
 
-		Tree treeL1 = new Tree(2);
+		BSTNode treeL1 = new BSTNode(2);
 		treeL1.left = treeL2_1;
 		treeL1.right = treeL2_2;
 		return treeL1;
 	}
 
-	private Tree createComplexTree() {
-		Tree treeL5_1 = new Tree(10);
-		Tree treeL5_2 = new Tree(9);
-		Tree treeL5_3 = new Tree(4);
-		Tree treeL5_4 = new Tree(4);
+	private BSTNode createComplexTree() {
+		BSTNode treeL5_1 = new BSTNode(10);
+		BSTNode treeL5_2 = new BSTNode(9);
+		BSTNode treeL5_3 = new BSTNode(4);
+		BSTNode treeL5_4 = new BSTNode(4);
 
-		Tree treeL4_1 = new Tree(3);
-		Tree treeL4_2 = new Tree(8, treeL5_1, treeL5_2);
-		Tree treeL4_3 = new Tree(8);
-		Tree treeL4_4 = new Tree(8, treeL5_3, treeL5_4);
+		BSTNode treeL4_1 = new BSTNode(3);
+		BSTNode treeL4_2 = new BSTNode(8, treeL5_1, treeL5_2);
+		BSTNode treeL4_3 = new BSTNode(8);
+		BSTNode treeL4_4 = new BSTNode(8, treeL5_3, treeL5_4);
 
-		Tree treeL3_1 = new Tree(2, treeL4_1, treeL4_2);
-		Tree treeL3_2 = new Tree(7);
-		Tree treeL3_3 = new Tree(6, treeL4_3, treeL4_4);
+		BSTNode treeL3_1 = new BSTNode(2, treeL4_1, treeL4_2);
+		BSTNode treeL3_2 = new BSTNode(7);
+		BSTNode treeL3_3 = new BSTNode(6, treeL4_3, treeL4_4);
 
-		Tree treeL2_1 = new Tree(3, treeL3_1, treeL3_2);
-		Tree treeL2_2 = new Tree(5, treeL3_3, null);
+		BSTNode treeL2_1 = new BSTNode(3, treeL3_1, treeL3_2);
+		BSTNode treeL2_2 = new BSTNode(5, treeL3_3, null);
 
-		Tree treeL1_1 = new Tree(4, treeL2_1, treeL2_2);
+		BSTNode treeL1_1 = new BSTNode(4, treeL2_1, treeL2_2);
 		return treeL1_1;
 	}
 
 	@Test
 	public void simpleTreeOneNodeRecursive() {
-		Tree tree = new Tree(7);
+		BSTNode tree = new BSTNode(7);
 		PreOrderTraversalRecursive preOrderTraversal = new PreOrderTraversalRecursive();
 		int n = preOrderTraversal.findMaxDistinctValuesRecursive(tree);
 		Assert.assertEquals(1, n);
@@ -63,7 +63,7 @@ public class TreePreOrderTraversalRecTest {
 
 	@Test
 	public void simpleTreeRecursive() {
-		Tree tree = createSimpleTree();
+		BSTNode tree = createSimpleTree();
 		PreOrderTraversalRecursive preOrderTraversal = new PreOrderTraversalRecursive();
 		int n = preOrderTraversal.findMaxDistinctValuesRecursive(tree);
 		Assert.assertEquals(4, n);
@@ -71,7 +71,7 @@ public class TreePreOrderTraversalRecTest {
 
 	@Test
 	public void complexTreeRecursive() {
-		Tree tree = createComplexTree();
+		BSTNode tree = createComplexTree();
 		PreOrderTraversalRecursive preOrderTraversal = new PreOrderTraversalRecursive();
 		int n = preOrderTraversal.findMaxDistinctValuesRecursive(tree);
 		Assert.assertEquals(5, n);
