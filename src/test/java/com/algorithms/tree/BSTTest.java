@@ -17,12 +17,23 @@ public class BSTTest extends AbstractBSTTest {
 
 
   @Test
-  public void findNodeSimple() {
+  public void findNodeSimpleTree() {
     BSTNode root=createSimpleTree();
     BST bst=new BST(root);
     BSTNode bstNode=bst.findNode(4);
     Assert.assertNotNull(bstNode);
     bstNode=bst.findNode(8);
     Assert.assertNull(bstNode);
+  }
+
+
+  @Test
+  public void findNodeComplexTree() {
+    BSTNode root=createComplexTree();
+    BST bst=new BST(root);
+    BSTNode bstNode=bst.findNode(9);
+    Assert.assertNotNull(bstNode);
+    bstNode=bst.findNode(24);
+    Assert.assertNotNull(bstNode);
   }
 }
