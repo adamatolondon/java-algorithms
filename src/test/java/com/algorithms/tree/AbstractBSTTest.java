@@ -36,12 +36,12 @@ public abstract class AbstractBSTTest {
   /* ..... / \ ...... / . \ ......... */
   /* .... 2 . 8 .... 19 .. 25........ */
   /* ....... / \ ........ / . \ ..... */
-  /* ...... 7 . 9 ...... 24 . 40 .... */
+  /* ...... 7 . 9 ...... 24 . 27 .... */
   protected BSTNode createComplexTree() {
     BSTNode treeL5_1=new BSTNode(7);
     BSTNode treeL5_2=new BSTNode(9);
     BSTNode treeL5_3=new BSTNode(24);
-    BSTNode treeL5_4=new BSTNode(40);
+    BSTNode treeL5_4=new BSTNode(27);
 
     BSTNode treeL4_1=new BSTNode(2);
     BSTNode treeL4_2=new BSTNode(8,treeL5_1,treeL5_2);
